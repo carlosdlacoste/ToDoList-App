@@ -41,21 +41,25 @@ export const ToDoList = () =>{
     return(
 
             <>
-                <div className="input-group mb-3">
-                <input type="text" onKeyUp={handleAddTask} />
-                </div>
-                <ul className="list-group">
-                    {
-                        taskList.map((element, index) => {
-                            return(
-                                <li key={index} className="list-group-item">{element.description}{" "}
-                                    <button type="button" onClick={() => { deleteTask(index) }} className="btn btn-danger">X</button>
-                                </li>
+                <div className='container'>
 
-                            )
-                        })
-                    }
-                </ul>
+                    <h1 className='text-center'>ToDos</h1>
+                    <div className="input-group mb-3">
+                    <input type="text" onKeyUp={handleAddTask} className="form-control" placeholder="What needs to be done?" aria-label="Username" aria-describedby="basic-addon1"/>
+                    </div>
+                    <ul className="list-group">
+                        {
+                            taskList.map((element, index) => {
+                                return(
+                                    <li key={index} className="list-group-item d-flex justify-content-between">{element.description}{" "}
+                                        <button type="button" onClick={() => { deleteTask(index) }} className="btn btn-danger">X</button>
+                                    </li>
+
+                                )
+                            })
+                        }
+                    </ul>
+                </div>
             
             </>
 

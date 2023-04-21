@@ -1,4 +1,10 @@
 
+h1{
+    font-family: 'Indie Flower', cursive;
+    color: red;
+    font-size: 10vh;
+    opacity: 0.5;
+}
 /* 
 
     You can write your own styles here...
