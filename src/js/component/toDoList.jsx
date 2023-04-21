@@ -34,7 +34,7 @@ export const ToDoList = () =>{
 
     const deleteTask = (positionList) =>{
         setTaskList(
-            taskList.filter(taskList, taskIndex => taskIndex != positionList)
+            taskList.filter((taskList, taskIndex) => taskIndex != positionList)
         );
     }
 
@@ -52,7 +52,7 @@ export const ToDoList = () =>{
                             taskList.map((element, index) => {
                                 return(
                                     <li key={index} className="list-group-item d-flex justify-content-between">{element.description}{" "}
-                                        <button type="button" onClick={() => { deleteTask(index) }} className="btn btn-danger">X</button>
+                                        <button type="button" onClick={ () => deleteTask(index) } className="btn btn-danger">X</button>
                                     </li>
 
                                 )
