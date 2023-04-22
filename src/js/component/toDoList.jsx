@@ -50,10 +50,13 @@ export const ToDoList = () =>{
                     </div>
                     <ul className="list-group">
                         {
-                            taskList.map((element, index) => {
+                            taskList.length == 0 && <li className='list-group-item'>No hay tareas, añadir tareas</li>
+                        }
+                        { 
+                           taskList.length != 0 && taskList.map((element, index) => {
                                 return(
                                     <li key={index} className="list-group-item d-flex justify-content-between">{element.description}{" "}
-                                        <button type="button" onClick={ () => deleteTask(index) } className="btn btn-danger">X</button>
+                                        <button type="button" onClick={ () => deleteTask(index) } className="btn btn-danger"><i className="fa-solid fa-trash"></i></button>
                                     </li>
 
                                 )
