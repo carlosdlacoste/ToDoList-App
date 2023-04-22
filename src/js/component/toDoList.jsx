@@ -29,9 +29,11 @@ export const ToDoList = () =>{
                 description: inputValue,
                 status: false
             }])
-
+            
         }
+        
     }
+
 
     const deleteTask = (positionList) =>{
         setTaskList(
@@ -42,11 +44,12 @@ export const ToDoList = () =>{
     return(
 
             <>
+                
                 <div className='container'>
 
                     <h1 className='text-center'>ToDos</h1>
                     <div className="input-group mb-3">
-                    <input type="text" onKeyUp={handleAddTask} className="form-control" placeholder="What needs to be done?" aria-label="Username" aria-describedby="basic-addon1"/>
+                    <input type="text" onChange={e => setInputValue(e.target.value)} onKeyUp={handleAddTask} className="form-control" placeholder="What needs to be done?" aria-label="Username" aria-describedby="basic-addon1"/>
                     </div>
                     <ul className="list-group">
                         {
