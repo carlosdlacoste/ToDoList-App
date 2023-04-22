@@ -9,6 +9,63 @@ h1{
     font-size: 10vh;
     opacity: 0.5;
 }
+
+#delete-button {
+    height: 32px;
+    width: 40px;
+    position: relative;
+    display: flex;
+    justify-content: end;
+}
+
+.delete-active, .delete-active:before, .delete-active:after {
+    height: 6px;
+    width: 40px;
+    border-radius: 5px;
+    background: #cc0314;
+    position: absolute;
+    top: 13px;
+    left: 0;
+    -webkit-transform-origin: 50%;
+    -moz-transform-origin: 50%;
+    -ms-transform-origin: 50%;
+    -o-transform-origin: 50%;
+    transform-origin: 50%;
+    transition: .1s linear all;
+}
+
+.delete-active:before {
+    content: "";
+    top: -13px;
+}
+
+.delete-active:after {
+    content: "";
+    top: 13px;
+}
+
+#delete-button:hover .delete-active {
+    background: transparent;
+}
+
+#delete-button:hover .delete-active:before {
+    top: 0;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+#delete-button:hover .delete-active:after {
+    top: 0;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    opacity: 1;
+}
 /* 
 
     You can write your own styles here...
