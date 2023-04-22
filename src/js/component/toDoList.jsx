@@ -58,7 +58,7 @@ export const ToDoList = () =>{
                             taskList.length == 0 && <li className='list-group-item'>No hay tareas, añadir tareas</li>
                         }
                         { 
-                           taskList.length != 0 && taskList.map((element, index) => {
+                            taskList.length != 0 && taskList.map((element, index) => {
                                 return(
                                     <li key={index} className="list-group-item d-flex justify-content-between">{element.description}{" "}
                                         <button id='delete-button' type="button" onClick={ () => deleteTask(index) } className="btn"><span className='delete-active'></span></button>
