@@ -15,7 +15,7 @@ export const ToDoList = () =>{
             status: true
         },
         {
-            description: "LLorar leyendo la documentacion",
+            description: "Llorar leyendo la documentacion",
             status: true
         },
     ]);
@@ -29,6 +29,8 @@ export const ToDoList = () =>{
                 description: inputValue,
                 status: false
             }])
+            event.target.value = ''
+            setInputValue(event.target.value)
             
         }
         
