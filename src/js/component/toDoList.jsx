@@ -19,6 +19,7 @@ export const ToDoList = () =>{
             status: true
         },
     ]);
+    const [itemCount, setItemCount] = useState(3);
 
 
     const handleAddTask = (event) =>{
@@ -32,6 +33,7 @@ export const ToDoList = () =>{
             event.target.value = ''
             setInputValue(event.target.value)
             
+            setItemCount(itemCount + 1)
         }
         
     }
@@ -41,6 +43,7 @@ export const ToDoList = () =>{
         setTaskList(
             taskList.filter((taskList, taskIndex) => taskIndex != positionList)
         );
+        setItemCount(itemCount - 1)
     }
 
     return(
@@ -65,7 +68,10 @@ export const ToDoList = () =>{
                                     </li>
 
                                 )
-                            })
+                            }) 
+                        }
+                        {
+                            taskList.length != 0 && <li id="item-left" className='list-group-item'>{itemCount}{" "}item left</li>
                         }
                     </ul>
                 </div>

@@ -66,6 +66,10 @@ h1{
     transform: rotate(-45deg);
     opacity: 1;
 }
+
+#item-left {
+    color: #ABB2B9
+}
 /* 
 
     You can write your own styles here...
